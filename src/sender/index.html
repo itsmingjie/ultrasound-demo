@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/bulma.min.css" />
+
+    <script type="text/javascript" src="/static/quiet.js"></script>
+    <script type="text/javascript" src="sender.js"></script>
+
+    <script async type="text/javascript" src="/static/quiet-em.js"></script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                Wiretap Sender
+            </h1>
+            <p class="subtitle">
+                Communicate between devices in airplane mode... Is that even possible?
+            </p>
+
+            <div class="hidden" data-quiet-profile-name="ultrasonic"></div>
+            <div class="hidden" data-quiet-warning></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="field">
+                <label class="label">Transmit Secret Color</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="SECRET COLOR" id="data" autofocus  autocapitalize="none" autocomplete="off" spellcheck="off" data-quiet-text-input>
+                </div>
+                <p class="help">Try common colors like "red", "blue", or HEX codes like "#E42D42".</p>
+            </div>
+            <button class="button is-danger" id="send" data-quiet-send-button data-quiet-sending-text="Sending...">Send Secret Message</button>
+        </div>
+    </section>
+</body>
+
+</html>
