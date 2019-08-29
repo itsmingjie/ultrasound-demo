@@ -5,6 +5,36 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Sender">
+    <link rel="apple-touch-icon" href="sender.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="sender.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="sender.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="sender.png">
+
+    <style>
+        body {
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+        }
+
+        #credit {
+            mix-blend-mode: difference !important;
+            position: absolute;
+            bottom: 0px;
+            right: 10px;
+            font-weight: 800;
+            text-align: right;
+        }
+
+        h1 {
+            font-size: 5rem!important;
+        }
+    </style>
+
     <link rel="stylesheet" href="/static/bulma.min.css" />
 
     <script type="text/javascript" src="/static/quiet.js"></script>
@@ -14,32 +44,39 @@
 </head>
 
 <body>
-    <section class="section">
-        <div class="container">
-            <h1 class="title">
-                Wiretap Sender
-            </h1>
-            <p class="subtitle">
-                Communicate between devices in airplane mode... Is that even possible?
-            </p>
-
-            <div class="hidden" data-quiet-profile-name="ultrasonic"></div>
-            <div class="hidden" data-quiet-warning></div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="field">
-                <label class="label">Transmit Secret Color</label>
-                <div class="control">
-                    <input class="input" type="text" placeholder="SECRET COLOR" id="data" autofocus  autocapitalize="none" autocomplete="off" spellcheck="off" data-quiet-text-input>
+    <section class="hero is-fullheight is-primary is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">
+                    Secret Sender
+                </h1>
+                <p class="subtitle">
+                    Communicate between devices in <strong>airplane mode</strong>... Is that even possible?
+                </p>
+                <div class="container has-text-centered">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input is-large" type="text" placeholder="Color/HEX code" id="data" autofocus
+                                autocapitalize="none" autocomplete="off" spellcheck="off" data-quiet-text-input>
+                        </div>
+                        <p class="help">Try common colors like "red", "blue", or HEX codes like "#E42D42".</p>
+                    </div>
+                    <button class="button is-dark" id="send" data-quiet-send-button
+                        data-quiet-sending-text="Sending...">Send
+                        Secret Message</button>
                 </div>
-                <p class="help">Try common colors like "red", "blue", or HEX codes like "#E42D42".</p>
             </div>
-            <button class="button is-danger" id="send" data-quiet-send-button data-quiet-sending-text="Sending...">Send Secret Message</button>
         </div>
+
     </section>
+
+    <div id="credit">
+        <p>Designed by Mingjie Jiang (@itsmingjie)</p>
+        <p>Wootton Hack Club 2019-20</p>
+    </div>
+
+    <div class="hidden" data-quiet-profile-name="ultrasonic"></div>
+    <div class="hidden" data-quiet-warning></div>
 </body>
 
 </html>

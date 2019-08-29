@@ -12,7 +12,8 @@ var TextReceiver = (function () {
         content = recvPayload;
         warningbox.classList.add("hidden");
 
-        document.body.style.backgroundColor = Quiet.ab2str(content)
+        document.getElementById("hero").style.backgroundColor = Quiet.ab2str(content)
+        document.getElementById("data").innerHTML = Quiet.ab2str(content)
     };
 
     function onReceiverCreateFail(reason) {
@@ -46,7 +47,7 @@ var TextReceiver = (function () {
         document.getElementById("receive").addEventListener('click', () => {
             warningbox = document.querySelector('[data-quiet-warning]');
             Quiet.addReadyCallback(onQuietReady, onQuietFail);
-            document.getElementById("receive").style.display = "none";
+            document.getElementById("pre").style.display = "none";
         })
     });
 })();

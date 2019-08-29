@@ -24,7 +24,7 @@ var TextTransmitter = (function() {
         var originalText = e.target.innerText;
         e.target.innerText = e.target.getAttribute('data-quiet-sending-text');
         e.target.setAttribute('data-quiet-sending-text', originalText);
-        var payload = textbox.value;
+        var payload = textbox.value.toUpperCase();
         if (payload === "") {
             onTransmitFinish();
             return;

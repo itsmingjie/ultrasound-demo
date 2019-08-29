@@ -11,17 +11,50 @@
     <script type="text/javascript" src="receiver.js"></script>
 
     <script async type="text/javascript" src="/static/quiet-em.js"></script>
+
+    <style>
+        #data {
+            mix-blend-mode: difference!important;
+            color: 000!important;
+            font-size: 5rem;
+        }
+
+        #credit {
+            mix-blend-mode: difference!important;
+            color: 000!important;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-weight: 800;
+            text-align: right;
+        }
+    </style>
 </head>
 
 <body style="width: 100vw; height: 100vh">
-    <div class="hidden" data-quiet-profile-name="ultrasonic"></div>
-    <div class="hidden" data-quiet-warning></div>
-
-    <section class="section">
+    <section class="section" id="pre">
         <div class="wrapper">
             <button class="button is-danger" id="receive">Initiate Receiver</button>
         </div>
     </section>
+
+    <section class="hero is-fullheight" id="hero">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title" id="data">
+                    ?
+                </h1>
+            </div>
+        </div>
+
+        <div id="credit">
+            <p>Designed by Mingjie Jiang (@itsmingjie)</p>
+            <p>Wootton Hack Club 2019-20</p>
+        </div>
+        <div class="hidden" data-quiet-profile-name="ultrasonic"></div>
+        <div class="hidden" data-quiet-warning></div>
+    </section>
+
 </body>
 
 </html>
