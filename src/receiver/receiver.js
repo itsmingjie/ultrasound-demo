@@ -47,7 +47,8 @@ var TextReceiver = (function () {
         document.getElementById("receive").addEventListener('click', () => {
             warningbox = document.querySelector('[data-quiet-warning]');
             Quiet.addReadyCallback(onQuietReady, onQuietFail);
-            document.getElementById("pre").style.display = "none";
+
+            document.getElementById("data").innerHTML = "Ready."
         })
     });
 })();
